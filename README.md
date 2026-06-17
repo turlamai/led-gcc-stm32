@@ -1,8 +1,7 @@
 # led-gcc-stm32
 
-![Language](https://img.shields.io/badge/language-C-blue)
+![Language](https://img.shields.io/badge/language-C-blue)  [![English](https://img.shields.io/badge/lang-English-blue)](README.md) [![中文](https://img.shields.io/badge/lang-中文-red)](README.zh-CN.md)
 
-[English](README.md) | [中文](README.zh-CN.md)
 
 A complete STM32F103C8T6 (Blue Pill / YT32M1) LED blink project for VS Code, with build, flash, and debug fully configured out of the box.
 
