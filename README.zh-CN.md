@@ -1,10 +1,10 @@
-# led-gcc-stm32
+# STM32 LED Project
 
-[English](README.md) | [中文](README.zh-CN.md)
+一个完整的 STM32F103C8T6（Blue Pill / YT32M1）LED 闪烁工程，面向 VS Code 开发，构建、烧录和调试均已开箱即配。 构建基于 GNU Make 和 ARM GCC 工具链。烧录通过 OpenOCD + CMSIS-DAP（SWD）完成。调试使用 VS Code Cortex-Debug 扩展，支持 SVD 外设寄存器视图。
 
-一个完整的 STM32F103C8T6（Blue Pill / YT32M1）LED 闪烁工程，面向 VS Code 开发，构建、烧录和调试均已开箱即配。
+![C](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=white)
 
-构建基于 GNU Make 和 ARM GCC 工具链。烧录通过 OpenOCD + CMSIS-DAP（SWD）完成。调试使用 VS Code Cortex-Debug 扩展，支持 SVD 外设寄存器视图。
+[English](README.md) · **中文**
 
 ## 特性
 
@@ -33,7 +33,7 @@
 ### 1. 克隆
 
 ```bash
-git clone https://github.com/jrtxio/led-gcc-stm32.git
+git clone https://github.com/turinglambdaai/led-gcc-stm32.git
 cd led-gcc-stm32
 ```
 
@@ -159,3 +159,7 @@ adapter speed 20000
 ### 添加源文件
 
 在 `Makefile` 的 `C_SOURCES` 列表中添加新的 `.c` 文件。
+
+## 许可证
+
+本项目暂未包含许可证文件。

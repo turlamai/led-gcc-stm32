@@ -1,11 +1,10 @@
-# led-gcc-stm32
+# STM32 LED Project
 
-![Language](https://img.shields.io/badge/language-C-blue)  [![English](https://img.shields.io/badge/lang-English-blue)](README.md) [![中文](https://img.shields.io/badge/lang-中文-red)](README.zh-CN.md)
+A complete STM32F103C8T6 (Blue Pill / YT32M1) LED blink project for VS Code, with build, flash, and debug fully configured out of the box. Build is powered by GNU Make and the ARM GCC toolchain. Flashing uses OpenOCD over CMSIS-DAP (SWD). Debugging uses the Cortex-Debug VS Code extension with SVD peripheral view.
 
+![C](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=white)
 
-A complete STM32F103C8T6 (Blue Pill / YT32M1) LED blink project for VS Code, with build, flash, and debug fully configured out of the box.
-
-Build is powered by GNU Make and the ARM GCC toolchain. Flashing uses OpenOCD over CMSIS-DAP (SWD). Debugging uses the Cortex-Debug VS Code extension with SVD peripheral view.
+**English** · [中文](README.zh-CN.md)
 
 ## Features
 
@@ -34,7 +33,7 @@ Make sure `arm-none-eabi-gcc`, `make`, and `openocd` are on your `PATH`.
 ### 1. Clone
 
 ```bash
-git clone https://github.com/jrtxio/led-gcc-stm32.git
+git clone https://github.com/turinglambdaai/led-gcc-stm32.git
 cd led-gcc-stm32
 ```
 
@@ -160,3 +159,7 @@ If you use a different debug probe (ST-Link, J-Link, etc.), modify this file acc
 ### Adding source files
 
 Add new `.c` files to the `C_SOURCES` list in the `Makefile`.
+
+## License
+
+This project does not currently include a license file.
