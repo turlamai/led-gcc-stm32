@@ -1,12 +1,12 @@
 # STM32 LED Project
 
-一个完整的 STM32F103C8T6（Blue Pill / YT32M1）LED 闪烁工程，面向 VS Code 开发，构建、烧录和调试均已开箱即配。 构建基于 GNU Make 和 ARM GCC 工具链。烧录通过 OpenOCD + CMSIS-DAP（SWD）完成。调试使用 VS Code Cortex-Debug 扩展，支持 SVD 外设寄存器视图。
+一个完整的 STM32F103C8T6（Blue Pill / YT32M1）LED 闪烁工程，面向 VS Code 开发，构建、烧录和调试均已开箱即配。构建基于 GNU Make 和 ARM GCC 工具链。烧录通过 OpenOCD + CMSIS-DAP（SWD）完成。调试使用 VS Code Cortex-Debug 扩展，支持 SVD 外设寄存器视图。
 
-![C](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=white) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [English](README.md) · **中文**
 
-## 特性
+## 功能特性
 
 - **一条命令构建** — `make all` 生成 `.elf`、`.hex`、`.bin` 三种格式输出
 - **一条命令烧录** — `make flash` 通过 OpenOCD 将固件写入 MCU
@@ -108,34 +108,34 @@ adapter speed 20000
 ## 项目结构
 
 ```
-.
+led-gcc-stm32/
 ├── Makefile                          # 构建系统（CubeMX 生成，已修改）
-├── LED.ioc                          # STM32CubeMX 工程文件
-├── startup_stm32f103xb.s            # 启动汇编（向量表、初始化）
-├── STM32F103C8Tx_FLASH.ld           # 链接脚本
-├── STM32F103xx.svd                  # SVD 文件（外设寄存器视图）
-├── stm32yt32m1.cfg                  # OpenOCD 配置（YT32M1 开发板）
+├── LED.ioc                           # STM32CubeMX 工程文件
+├── startup_stm32f103xb.s             # 启动汇编（向量表、初始化）
+├── STM32F103C8Tx_FLASH.ld            # 链接脚本
+├── STM32F103xx.svd                   # SVD 文件（外设寄存器视图）
+├── stm32yt32m1.cfg                   # OpenOCD 配置（YT32M1 开发板）
 ├── Core/
 │   ├── Inc/
-│   │   ├── main.h                   # 主头文件
-│   │   ├── gpio.h                   # GPIO 初始化头文件
-│   │   ├── stm32f1xx_hal_conf.h     # HAL 配置
-│   │   └── stm32f1xx_it.h          # 中断处理头文件
+│   │   ├── main.h                    # 主头文件
+│   │   ├── gpio.h                    # GPIO 初始化头文件
+│   │   ├── stm32f1xx_hal_conf.h      # HAL 配置
+│   │   └── stm32f1xx_it.h            # 中断处理头文件
 │   └── Src/
-│       ├── main.c                   # 主程序（HAL 初始化、时钟、GPIO）
-│       ├── gpio.c                   # GPIO 初始化（LED 引脚）
-│       ├── stm32f1xx_hal_msp.c      # HAL MSP 回调
-│       ├── stm32f1xx_it.c           # 中断处理
-│       └── system_stm32f1xx.c       # 系统时钟初始化
+│       ├── main.c                    # 主程序（HAL 初始化、时钟、GPIO）
+│       ├── gpio.c                    # GPIO 初始化（LED 引脚）
+│       ├── stm32f1xx_hal_msp.c       # HAL MSP 回调
+│       ├── stm32f1xx_it.c            # 中断处理
+│       └── system_stm32f1xx.c        # 系统时钟初始化
 ├── Drivers/
-│   ├── CMSIS/                       # CMSIS 内核及设备头文件
-│   └── STM32F1xx_HAL_Driver/        # HAL 驱动源码及头文件
+│   ├── CMSIS/                        # CMSIS 内核及设备头文件
+│   └── STM32F1xx_HAL_Driver/         # HAL 驱动源码及头文件
 ├── .vscode/
-│   ├── launch.json                  # Cortex-Debug 调试配置
-│   ├── tasks.json                   # 构建、清理、烧录任务
-│   ├── c_cpp_properties.json        # IntelliSense 配置
-│   └── settings.json                # 文件关联
-└── build/                           # （自动生成）构建输出
+│   ├── launch.json                   # Cortex-Debug 调试配置
+│   ├── tasks.json                    # 构建、清理、烧录任务
+│   ├── c_cpp_properties.json         # IntelliSense 配置
+│   └── settings.json                 # 文件关联
+└── build/                            # （自动生成）构建输出
 ```
 
 ## VS Code 集成
@@ -162,4 +162,4 @@ adapter speed 20000
 
 ## 许可证
 
-本项目暂未包含许可证文件。
+基于 [MIT 许可证](LICENSE) 授权。
