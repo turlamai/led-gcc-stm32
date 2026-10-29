@@ -33,7 +33,7 @@ Make sure `arm-none-eabi-gcc`, `make`, and `openocd` are on your `PATH`.
 ### 1. Clone
 
 ```bash
-git clone https://github.com/turinglambdaai/led-gcc-stm32.git
+git clone https://github.com/turlamai/led-gcc-stm32.git
 cd led-gcc-stm32
 ```
 
